@@ -48,6 +48,7 @@ var Main = React.createClass({
 
   render: function() {
     return (
+
       <div>
         <div className="container-fluid componentStyle">
           <div className="row page-header">

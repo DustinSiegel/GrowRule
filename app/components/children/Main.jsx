@@ -49,7 +49,6 @@ var Main = React.createClass({
       <div className="container" style={ {backgroundColor: "white", borderStyle: "solid", borderWidth: "1px"} }>
 
         <div className="page-header">
-          <h1 className="text-center">Grow * Rule</h1>
           <h4 className="text-center">Tap Anywhere To Start</h4>
         </div>
 

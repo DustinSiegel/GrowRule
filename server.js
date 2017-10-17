@@ -19,7 +19,7 @@ if(process.env.NODE_ENV == 'production'){
   mongoose.connect('mongodb://heroku_dcjvjz77:j3ib7vj9vjtp2v3a911h13sf8q@ds117485.mlab.com:17485/heroku_dcjvjz77');
 }
 else{
-  mongoose.connect('mongodb://localhost/nytreact');
+  mongoose.connect('mongodb://localhost/GrowRuleSchema');
 }
 var db = mongoose.connection;
 

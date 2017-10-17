@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { Document, Page } from 'react-pdf/build/entry.webpack';
 
 var React = require("react");
 
@@ -33,7 +36,10 @@ var Menu = React.createClass({
   render: function() {
     return (
 
-      <div>Some Words in It</div>
+      <div>
+        <img src={require('../../../public/images/growrule01.pdf')} />
+        Some Words in It
+      </div>
 
     );
   }

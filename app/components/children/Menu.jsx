@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Document, Page } from 'react-pdf/build/entry.webpack';
 
 var Menu = React.createClass({
 

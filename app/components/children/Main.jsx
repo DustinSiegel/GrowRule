@@ -1,5 +1,6 @@
 var React = require("react");
 
+var Menu = require("./Menu.jsx");
 var Query = require("./Query.jsx");
 var Search = require("./Search.jsx");
 var Saved = require("./Saved.jsx");
@@ -51,7 +52,7 @@ var Main = React.createClass({
         <div className="page-header">
           <h4 className="text-center">Tap Anywhere To Start</h4>
         </div>
-
+        <Menu _setSearchFeilds={this._setSearchFeilds} />
         <Query _setSearchFeilds={this._setSearchFeilds} />
         <Search apiResults={this.state.apiResults} _resetMongoResults={this._resetMongoResults} />
         <Saved mongoResults={this.state.mongoResults} _resetMongoResults={this._resetMongoResults} />

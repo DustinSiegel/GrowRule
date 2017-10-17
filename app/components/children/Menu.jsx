@@ -36,10 +36,43 @@ var Menu = React.createClass({
   render: function() {
     return (
 
-      <div>
-        <img src={require('../../../public/images/growrule01.pdf')} />
-        Some Words in It
-      </div>
+      <div>Menu file connected!</div>
+      // {/* <div className="panel panel-default">
+      //
+      //   <div className="panel-heading">
+      //     <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Search</b></i></h3>
+      //   </div>
+      //
+      //   <div className="panel-body text-center">
+      //     <form role="form" onSubmit={this._handleSubmit}>
+      //
+      //       <div className="form-group col-md-offset-3 col-md-6">
+      //         <label htmlFor="topic" className="text-center">Topic</label>
+      //         <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+      //       </div>
+      //
+      //       <br />
+      //
+      //       <div className="form-group col-md-offset-3 col-md-6">
+      //         <label htmlFor="startYear">Start Year</label>
+      //         <input type="text" className="form-control text-center" id="startYear" onChange={this._handleStartYearChange} />
+      //       </div>
+      //
+      //       <br />
+      //
+      //       <div className="form-group col-md-offset-3 col-md-6">
+      //         <label htmlFor="endYear">End Year</label>
+      //         <input type="text" className="form-control text-center" id="endYear" onChange={this._handleEndYearChange} />
+      //       </div>
+      //
+      //       <br />
+      //
+      //       <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="searchBtn">Search</button>
+      //
+      //     </form>
+      //   </div>
+      //
+      // </div> */}
 
     );
   }

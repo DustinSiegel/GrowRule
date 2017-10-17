@@ -1,6 +1,11 @@
 var React = require("react");
 
 var Menu = require("./Menu.jsx");
+var Clone = require("./Clone.jsx");
+var Cull = require("./Cull.jsx");
+var Harvest = require("./Harvest.jsx");
+var Mom = require("./Mom.jsx");
+var Transfer = require("./Transfer.jsx");
 var Query = require("./Query.jsx");
 var Search = require("./Search.jsx");
 var Saved = require("./Saved.jsx");
@@ -54,6 +59,11 @@ var Main = React.createClass({
           <h4 className="text-center">Tap Anywhere To Start</h4>
         </div>
         <Menu _setSearchFeilds={this._setSearchFeilds} />
+        <Clone _setSearchFeilds={this._setSearchFeilds} />
+        <Cull _setSearchFeilds={this._setSearchFeilds} />
+        <Harvest _setSearchFeilds={this._setSearchFeilds} />
+        <Mom _setSearchFeilds={this._setSearchFeilds} />
+        <Transfer _setSearchFeilds={this._setSearchFeilds} />
         <Query _setSearchFeilds={this._setSearchFeilds} />
         <Search apiResults={this.state.apiResults} _resetMongoResults={this._resetMongoResults} />
         <Saved mongoResults={this.state.mongoResults} _resetMongoResults={this._resetMongoResults} />

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Document, Page } from 'react-pdf/build/entry.webpack';
 
-var React = require("react");
-
 var Menu = React.createClass({
 
   // getInitialState: function() {
@@ -36,7 +34,11 @@ var Menu = React.createClass({
   render: function() {
     return (
 
-      <div>Menu file connected!</div>
+      <div>
+        <h3>Menu file connected!</h3>
+
+      </div>
+
       // {/* <div className="panel panel-default">
       //
       //   <div className="panel-heading">

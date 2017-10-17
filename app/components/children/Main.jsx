@@ -48,42 +48,43 @@ var Main = React.createClass({
 
   render: function() {
     return (
-
-      <div className="container-fluid componentStyle">
-        <div className="row page-header">
-          <h1 className="text-center">Grow * Rule</h1>
-          <h4 className="text-center">Tap Anywhere To Start</h4>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Menu _setSearchFeilds={this._setSearchFeilds} />
+      <div>
+        <div className="container-fluid componentStyle">
+          <div className="row page-header">
+            <h1 className="text-center">Grow * Rule</h1>
+            <h4 className="text-center">Tap Anywhere To Start</h4>
           </div>
         </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Clone _setSearchFeilds={this._setSearchFeilds} />
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Menu _setSearchFeilds={this._setSearchFeilds} />
+            </div>
           </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Cull _setSearchFeilds={this._setSearchFeilds} />
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Clone _setSearchFeilds={this._setSearchFeilds} />
+            </div>
           </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Harvest _setSearchFeilds={this._setSearchFeilds} />
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Cull _setSearchFeilds={this._setSearchFeilds} />
+            </div>
           </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Mom _setSearchFeilds={this._setSearchFeilds} />
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Harvest _setSearchFeilds={this._setSearchFeilds} />
+            </div>
           </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Transfer _setSearchFeilds={this._setSearchFeilds} />
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Mom _setSearchFeilds={this._setSearchFeilds} />
+            </div>
           </div>
-        </div>
+          <div className="row componentStyle">
+            <div className="col-xs-12">
+              <Transfer _setSearchFeilds={this._setSearchFeilds} />
+            </div>
+          </div>
       </div>
     );
   }

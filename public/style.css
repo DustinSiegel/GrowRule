@@ -4,3 +4,11 @@
   border-width: 1px;
   margin: 25px;
 }
+
+#growRuleBanner {
+	padding-top: 2%;
+	display: block;
+    margin: auto;
+    width: 40%;
+}
+

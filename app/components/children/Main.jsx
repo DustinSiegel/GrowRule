@@ -1,6 +1,5 @@
 var React = require("react");
 
-var Menu = require("./Menu.jsx");
 var Clone = require("./Clone.jsx");
 var Cull = require("./Cull.jsx");
 var Harvest = require("./Harvest.jsx");
@@ -50,18 +49,7 @@ var Main = React.createClass({
     return (
 
       <div>
-        <div className="container-fluid componentStyle">
-          <div className="row page-header">
-            <h1 className="text-center">Grow * Rule</h1>
-            <h4 className="text-center">Tap Anywhere To Start</h4>
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Menu _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
+        <div className="container-fluid row componentStyle">
           <div className="col-xs-12">
             <Clone _setSearchFeilds={this._setSearchFeilds} />
           </div>

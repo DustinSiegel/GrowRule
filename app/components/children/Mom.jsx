@@ -46,6 +46,8 @@ var Mom = React.createClass({
             <div className="form-group col-md-offset-3 col-md-6">
               <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Made into a Mother Plant</label>
               <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+              <br />
+              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
             </div>
 
             <br />

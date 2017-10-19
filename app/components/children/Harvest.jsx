@@ -15,7 +15,7 @@ var Harvest = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
+  //   this.props._setSearchFeilds(this.state.harvest, this.state.poNum, this.state.date, this.state.date);
   // },
   //
   // _handleTopicChange: function(e) {

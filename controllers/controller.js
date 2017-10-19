@@ -2,7 +2,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Article = require('../models/Article.js');
+var Article = require('../models/GrowRule.js');
 
 router.get("/", function(req, res) {
   res.sendFile(process.cwd() + "/public/index.html");

@@ -16,40 +16,47 @@
 body {
 	padding-left: 4%;
 }
-/*
-#buttonContainer {
-	position: relative;
-	padding: 5%;
-}*/
 
-.button1 {
+.createCloneButton {
 	position: absolute;
-	z-index: 50;
+	top: 38%;
+	left: 34%;
+	z-index: 1;
 }
 
-.button2 {
+.movePlantButton {
 	position: absolute;
-	z-index: 60;
+	top: 38%;
+	left: 48%;
+	z-index: 1;
 }
 
-.button3 {
+.harvestPlantButton {
 	position: absolute;
-	z-index: 100;
+	top: 61%;
+	left: 30%;
+	z-index: 1;
 }
 
-.button4 {
+.cullPlantButton {
 	position: absolute;
-	z-index: 120;
+	top: 60%;
+	left: 54%;
+	z-index: 1;
 }
 
-.button5 {
+.makeMomButton {
 	position: absolute;
-	z-index: 140;
+	top: 83%;
+	left: 35%;
+	z-index: 1;
 }
 
-.button6 {
+.createStrainButton {
 	position: absolute;
-	z-index: 160;
+	top: 81%;
+	left: 48%;
+	z-index: 1;
 }
 footer {
 	clear: all;

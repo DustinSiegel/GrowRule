@@ -14,10 +14,45 @@
 }
 
 body {
-	padding-left: 2%;
+	padding-left: 4%;
+}
+/*
+#buttonContainer {
+	position: relative;
+	padding: 5%;
+}*/
+
+.button1 {
+	position: absolute;
+	z-index: 50;
 }
 
+.button2 {
+	position: absolute;
+	z-index: 60;
+}
+
+.button3 {
+	position: absolute;
+	z-index: 100;
+}
+
+.button4 {
+	position: absolute;
+	z-index: 120;
+}
+
+.button5 {
+	position: absolute;
+	z-index: 140;
+}
+
+.button6 {
+	position: absolute;
+	z-index: 160;
+}
 footer {
+	clear: all;
 	text-align: center;
 	padding: 5%;
 }

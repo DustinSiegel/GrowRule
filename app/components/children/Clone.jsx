@@ -15,7 +15,7 @@ var Clone = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.clone, this.state.poNum, this.state.date, this.state.strainName);
+  //   this.props._setSearchFeilds(this.state.clone, this.state.poNum, this.state.date, //this.state.strainName);
   // },
   //
   // _handleTopicChange: function(e) {
@@ -30,7 +30,7 @@ var Clone = React.createClass({
   //   this.setState({date: e.target.value});
   // },
 
-  _handleEndYearChange: function(e) {
+  // _handleEndYearChange: function(e) {
   //   this.setState({strainName: e.target.value});
   // },
 

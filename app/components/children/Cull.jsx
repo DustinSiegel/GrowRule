@@ -16,7 +16,7 @@ var Cull = React.createClass({
   //   event.preventDefault();
   //
   //   this.props._setSearchFeilds(this.state.cull, this.state.poNum, this.state.date);
-   this.state.strainName);
+  // this.state.strainName);
   // },
   //
   // _handleTopicChange: function(e) {
@@ -35,7 +35,7 @@ var Cull = React.createClass({
   //   this.setState({strainName: e.target.value});
   // },
 
-  }
+  // }
 
   render: function() {
     return (

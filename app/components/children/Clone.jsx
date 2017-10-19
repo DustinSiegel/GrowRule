@@ -68,9 +68,10 @@ var Clone = React.createClass({
             </div>
 
             <br />
+            <br />
 
             <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="startYear">Plants Ready to be Moved:</label>
+              <label htmlFor="startYear">Clones ready to be Created:</label>
               <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
             </div>
 

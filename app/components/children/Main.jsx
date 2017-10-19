@@ -5,6 +5,7 @@ var Cull = require("./Cull.jsx");
 var Harvest = require("./Harvest.jsx");
 var Mom = require("./Mom.jsx");
 var Transfer = require("./Transfer.jsx");
+var Audit = require("./Audit.jsx");
 
 var helpers = require("../utils/helpers.js");
 
@@ -72,6 +73,11 @@ var Main = React.createClass({
         <div className="row componentStyle">
           <div className="col-xs-12">
             <Transfer _setSearchFeilds={this._setSearchFeilds} />
+          </div>
+        </div>
+        <div className="row componentStyle">
+          <div className="col-xs-12">
+            <Audit _setSearchFeilds={this._setSearchFeilds} />
           </div>
         </div>
       </div>

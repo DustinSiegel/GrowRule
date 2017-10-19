@@ -15,7 +15,7 @@ var Transfer = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
+  //   this.props._setSearchFields(this.state.topic, this.state.startYear, this.state.endYear);
   // },
   //
   // _handleTopicChange: function(e) {

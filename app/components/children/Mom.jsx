@@ -15,19 +15,23 @@ var Mom = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
+  //   this.props._setSearchFeilds(this.state.mom, //this.state.poNum, this.state.date, this.state.strainName);
   // },
   //
-  // _handleTopicChange: function(e) {
-  //   this.setState({topic: e.target.value});
+  // _handlemomChange: function(e) {
+  //   this.setState({mom: e.target.value});
   // },
   //
-  // _handleStartYearChange: function(e) {
-  //   this.setState({startYear: e.target.value});
+  // _handlepoNumChange: function(e) {
+  //   this.setState({poNum: e.target.value});
   // },
   //
-  // _handleEndYearChange: function(e) {
-  //   this.setState({endYear: e.target.value});
+  // _handledateChange: function(e) {
+  //   this.setState({date: e.target.value});
+  // },
+  //
+  //_handlestrainNameChange: function(e) {
+  //   this.setState({strainName: e.target.value});
   // },
 
   render: function() {
@@ -44,8 +48,8 @@ var Mom = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Made into a Mother Plant</label>
-              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+              <label htmlFor="Mom" className="text-center">Enter or Scan PO#(s) to be Made into a Mother Plant</label>
+              <input type="text" className="form-control text-center" id="mom" onChange={this._handlemomChange} />
               <br />
               <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
             </div>
@@ -53,8 +57,8 @@ var Mom = React.createClass({
             <br />
 
             <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="startYear">Plants Ready to be Made into a Mom:</label>
-              <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
+              <label htmlFor="poNum">Plants Ready to be Made into a Mom:</label>
+              <textarea type="text" className="form-control text-center" id="poNum" rows="5" onChange={this._handlepoNumChange} />
             </div>
 
             <br />

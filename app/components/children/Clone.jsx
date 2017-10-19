@@ -15,20 +15,25 @@ var Clone = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
+  //   this.props._setSearchFeilds(this.state.clone, this.state.poNum, this.state.date, this.state.strainName);
   // },
   //
   // _handleTopicChange: function(e) {
-  //   this.setState({topic: e.target.value});
+  //   this.setState({clone: e.target.value});
   // },
   //
   // _handleStartYearChange: function(e) {
-  //   this.setState({startYear: e.target.value});
+  //   this.setState({poNum: e.target.value});
   // },
   //
   // _handleEndYearChange: function(e) {
-  //   this.setState({endYear: e.target.value});
+  //   this.setState({date: e.target.value});
   // },
+
+  _handleEndYearChange: function(e) {
+  //   this.setState({strainName: e.target.value});
+  // },
+
 
   render: function() {
     return (

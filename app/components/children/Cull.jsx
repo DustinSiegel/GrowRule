@@ -15,20 +15,27 @@ var Cull = React.createClass({
   //
   //   event.preventDefault();
   //
-  //   this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
+  //   this.props._setSearchFeilds(this.state.cull, this.state.poNum, this.state.date);
+   this.state.strainName);
   // },
   //
   // _handleTopicChange: function(e) {
-  //   this.setState({topic: e.target.value});
+  //   this.setState({cull: e.target.value});
   // },
   //
   // _handleStartYearChange: function(e) {
-  //   this.setState({startYear: e.target.value});
+  //   this.setState({poNum: e.target.value});
   // },
   //
   // _handleEndYearChange: function(e) {
-  //   this.setState({endYear: e.target.value});
+  //   this.setState({date: e.target.value});
   // },
+
+  // _handleEndYearChange: function(e) {
+  //   this.setState({strainName: e.target.value});
+  // },
+
+  }
 
   render: function() {
     return (
@@ -45,7 +52,7 @@ var Cull = React.createClass({
 
             <div className="form-group col-md-offset-3 col-md-6">
               <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Culled</label>
-              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+              <input type="text" className="form-control text-center" id="cullNum" onChange={this._handleTopicChange} />
             </div>
 
             <br />

@@ -33,7 +33,47 @@ var Transfer = React.createClass({
   render: function() {
     return (
 
-      <div>Transfer file connected!</div>
+      // <div>Transfer file connected!</div>
+      <div className="panel panel-default">
+
+        <div className="panel-heading">
+          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Transfer</b></i></h3>
+        </div>
+
+        <div className="panel-body text-center">
+          <form role="form" onSubmit={this._handleSubmit}>
+
+            <div className="form-group">
+              <label for="exampleFormControlSelect1">Select Where These Plants Go:</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option>Early Veg</option>
+                <option>Late Veg</option>
+                <option>Bloom 1</option>
+                <option>Bloom 2</option>
+                <option>Bloom 3</option>
+              </select>
+            </div>
+
+            <div className="form-group col-md-offset-3 col-md-6">
+              <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Moved</label>
+              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+            </div>
+
+            <br />
+
+            <div className="form-group col-md-offset-3 col-md-6">
+              <label htmlFor="startYear">Plants Ready to be Moved:</label>
+              <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
+            </div>
+
+            <br />
+
+            <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="searchBtn">Update Database</button>
+
+          </form>
+        </div>
+
+      </div>
 
     );
   }

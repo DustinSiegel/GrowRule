@@ -38,7 +38,6 @@ var Clone = React.createClass({
   render: function() {
     return (
 
-      // <div>Clone file connected!</div>
       <div className="panel panel-default">
 
         <div className="panel-heading">
@@ -66,13 +65,21 @@ var Clone = React.createClass({
             </div>
 
             <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Moved</label>
+              <label htmlFor="topic" className="text-center">Enter or Scan Mother Plant PO#</label>
+              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+              <br />
+              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="submitMom">Submit</button>
+            </div>
+
+            <br />
+
+            <div className="form-group col-md-offset-3 col-md-6">
+              <label htmlFor="topic" className="text-center">Enter Number of Clones</label>
               <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
               <br />
               <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
             </div>
 
-            <br />
             <br />
 
             <div className="form-group col-md-offset-3 col-md-6">

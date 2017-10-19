@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 var GrowRuleSchema = new Schema({
 
-  title: {
+  poNum: {
     type: String,
     required: true
   },
@@ -15,13 +15,23 @@ var GrowRuleSchema = new Schema({
     required: true
   },
 
-  url: {
+  strainName: {
+    type: String,
+    required: true
+  },
+
+  location: {
+    type: String,
+    required: true
+  },
+
+  licenseNum: {
     type: String,
     required: true
   }
 
 });
 
-var Article = mongoose.model('Article', GrowRuleSchema);
+var GrowRuleSchema = mongoose.model('GrowRule', GrowRuleSchema);
 
-module.exports = Article;
+module.exports = GrowRuleSchema;

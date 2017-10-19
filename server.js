@@ -31,7 +31,7 @@ db.once('open', function() {
   console.log('Mongoose connection successful.');
 });
 
-var Article = require('./models/Article.js');
+var Article = require('./models/GrowRule.js');
 
 var router = require('./controllers/controller.js');
 app.use('/', router);

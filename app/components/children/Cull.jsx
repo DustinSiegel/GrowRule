@@ -3,17 +3,12 @@ var React = require("react");
 
 var Cull = React.createClass({
 
-  // getInitialState: function() {
-  //   return {
-  //     topic: "",
-  //     startYear: "",
-  //     endYear: ""
-  //   };
-  // },
-  //
-  // _handleSubmit: function(event) {
-  //
-  //   event.preventDefault();
+  _handleSubmit: function(event) {
+
+    event.preventDefault();
+    alert('it works!');
+    
+  },
   //
   //   this.props._setSearchFeilds(this.state.cull, this.state.poNum, this.state.date);
   // this.state.strainName);
@@ -35,12 +30,11 @@ var Cull = React.createClass({
   //   this.setState({strainName: e.target.value});
   // },
 
-  // }
+
 
   render: function() {
     return (
 
-      // <div>Cull file connected!</div>
       <div className="panel panel-default">
 
         <div className="panel-heading">
@@ -52,14 +46,14 @@ var Cull = React.createClass({
 
             <div className="form-group col-md-offset-3 col-md-6">
               <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Culled</label>
-              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
-              <br />
-              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
+                <input type="text" className="form-control text-center" id="topic" onSubmit={this._cullThisPlant} />
+                <br />
+                <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
             </div>
 
             <br />
 
-            <div className="form-group col-md-offset-3 col-md-6">
+            <div className="form-group col-xs-12">
               <label htmlFor="startYear">Plants Ready to be Culled:</label>
               <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
             </div>

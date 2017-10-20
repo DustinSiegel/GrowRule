@@ -31,7 +31,7 @@ var Audit = React.createClass({
               </select>
             </div>
 
-            <div className="form-group col-md-12">
+            <div className="form-group col-xs-12">
               <label htmlFor="startYear">Batch(es):</label>
               <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
             </div>

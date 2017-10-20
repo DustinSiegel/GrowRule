@@ -3,6 +3,13 @@ var React = require("react");
 
 var Cull = React.createClass({
 
+  getInitialState: function() {
+    return {
+      Cull: "",
+    };
+    this.handleCullChange = this.handleCullChange.bind(this)
+  },
+
   _handleSubmit: function(event) {
 
     event.preventDefault();
@@ -10,10 +17,10 @@ var Cull = React.createClass({
 
   },
 
-  // _handleCullChange: function(event) {
-  //   this.setState({cull: event.target.value})
-  //   console.log(this);
-  // },
+  _handleCullChange: function(event) {
+    this.setState({Cull: event.target.value})
+    console.log("something is happening!", event.target.value);
+  },
   //
   //   this.props._setSearchFeilds(this.state.cull, this.state.poNum, this.state.date);
   // this.state.strainName);
@@ -52,7 +59,7 @@ var Cull = React.createClass({
             <div className="form-group col-md-offset-3 col-md-6">
 
               <label htmlFor="Cull" className="text-center">Enter or Scan PO#(s) to be Culled</label>
-              <input type="text" className="form-control text-center" id="cull" onSubmit={this._handleCullChange} />
+              <input type="text" className="form-control text-center" id="cull" onChange={this._handleCullChange} />
               <br />
               <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
 

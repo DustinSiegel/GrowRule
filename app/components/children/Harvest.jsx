@@ -56,9 +56,10 @@ var Harvest = React.createClass({
 
             <br />
 
-            <div className="form-group col-md-offset-3 col-md-6">
+            <div className="form-group col-xs-12">
               <label htmlFor="poNum">Plants Ready to be Harvested:</label>
               <textarea type="text" className="form-control text-center" id="poNum" rows="5" onChange={this._handlepoNumChange} />
+
             </div>
 
             <br />

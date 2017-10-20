@@ -33,7 +33,6 @@ var Transfer = React.createClass({
   render: function() {
     return (
 
-      // <div>Transfer file connected!</div>
       <div className="panel panel-default">
 
         <div className="panel-heading">
@@ -63,7 +62,7 @@ var Transfer = React.createClass({
 
             <br />
 
-            <div className="form-group col-md-offset-3 col-md-6">
+            <div className="form-group col-xs-12">
               <label htmlFor="startYear">Plants Ready to be Moved:</label>
               <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
             </div>

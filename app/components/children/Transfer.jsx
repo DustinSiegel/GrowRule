@@ -43,7 +43,7 @@ var Transfer = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Select Where These Plants Go:</label>
+              <label htmlFor="exampleFormControlSelect1">Select Where These Plants Go:</label>
               <select className="form-control" id="exampleFormControlSelect1">
                 <option>Early Veg</option>
                 <option>Late Veg</option>

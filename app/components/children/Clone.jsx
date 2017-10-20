@@ -48,7 +48,7 @@ var Clone = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Select The Licence These Clones Belong To:</label>
+              <label htmlFor="exampleFormControlSelect1">Select The Licence These Clones Belong To:</label>
               <select className="form-control" id="exampleFormControlSelect1">
                 <option>Hypothetical licence 1 #111111111</option>
                 <option>Hypothetical licence 2 #222222222</option>
@@ -57,7 +57,7 @@ var Clone = React.createClass({
             </div>
 
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Select Where These Clones Go:</label>
+              <label htmlFor="exampleFormControlSelect1">Select Where These Clones Go:</label>
               <select className="form-control" id="exampleFormControlSelect1">
                 <option>Clone 1</option>
                 <option>Clone 2</option>

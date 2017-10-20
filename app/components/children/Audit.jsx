@@ -15,7 +15,7 @@ var Audit = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Select Batch to Audit:</label>
+              <label htmlFor="exampleFormControlSelect1">Select Batch to Audit:</label>
               <select className="form-control" id="exampleFormControlSelect1">
                 <option>All Plants</option>
                 <option>Hypothetical licence 1 #111111111</option>

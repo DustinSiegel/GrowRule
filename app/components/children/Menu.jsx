@@ -54,13 +54,41 @@ var Menu = React.createClass({
 		      </div>
 		    </div>
 		  </div>
-
-		    <footer className="row4">
-		      <img src="/images/growrulefooter.png" height="30%" width="30%" id="footerBanner" />
-		    </footer>
+		  <footer className="row4">
+		    <img src="/images/growrulefooter.png" height="30%" width="30%" id="footerBanner" />
+		  </footer>
 		</div>
     );
   }
 });
 
+class ShowHide extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      buttonVisible: false
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div onClick={() => this.onClick()}>
+          Parent - click me to show/hide my child
+        </div>
+        {
+          this.state.buttonVisible
+            ? <Child />
+            : null
+        }
+      </div>
+    )
+  }
+
+  onClick() {
+    this.setState({childVisible: !this.state.childVisible});
+  }
+};
+
 module.exports = Menu;
+// module.exports = ShowHide;

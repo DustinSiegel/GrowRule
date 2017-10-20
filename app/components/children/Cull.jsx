@@ -7,7 +7,7 @@ var Cull = React.createClass({
 
     event.preventDefault();
     alert('it works!');
-    
+
   },
   //
   //   this.props._setSearchFeilds(this.state.cull, this.state.poNum, this.state.date);
@@ -45,10 +45,12 @@ var Cull = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Culled</label>
-                <input type="text" className="form-control text-center" id="topic" onSubmit={this._cullThisPlant} />
-                <br />
-                <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
+
+              <label htmlFor="Cull" className="text-center">Enter or Scan PO#(s) to be Culled</label>
+              <input type="text" className="form-control text-center" id="cull" onSubmit={this._handlecullChange} />
+              <br />
+              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
+
             </div>
 
             <br />

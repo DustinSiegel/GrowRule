@@ -19,43 +19,43 @@ body {
 
 .createCloneButton {
 	position: absolute;
-	top: 38%;
-	left: 34%;
+	top: 7%;
+	left: 30%;
 	z-index: 1;
 }
 
 .movePlantButton {
 	position: absolute;
-	top: 38%;
-	left: 48%;
+	top: 6%;
+	left: 46%;
 	z-index: 1;
 }
 
 .harvestPlantButton {
 	position: absolute;
-	top: 61%;
-	left: 30%;
+	top: 26%;
+	left: 25%;
 	z-index: 1;
 }
 
 .cullPlantButton {
 	position: absolute;
-	top: 60%;
-	left: 54%;
+	top: 25%;
+	left: 52%;
 	z-index: 1;
 }
 
 .makeMomButton {
 	position: absolute;
-	top: 83%;
-	left: 35%;
+	top: 45%;
+	left: 30%;
 	z-index: 1;
 }
 
-.createStrainButton {
+.viewDataButton {
 	position: absolute;
-	top: 81%;
-	left: 48%;
+	top: 43%;
+	left: 46%;
 	z-index: 1;
 }
 footer {

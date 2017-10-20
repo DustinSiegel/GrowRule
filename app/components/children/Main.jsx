@@ -10,85 +10,98 @@ var Audit = require("./Audit.jsx");
 
 var helpers = require("../utils/helpers.js");
 
-var Main = React.createClass({
-
-  getInitialState: function() {
-    return {
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       apiResults: [],
       mongoResults: [],
-      searchTerms: ["","",""]
+      searchTerms: ["","",""],
+      currentView: 'Clone'
     };
-  },
 
-  _setSearchFeilds: function(topic, start, end) {
+    this.handleNavClick = this.handleNavClick.bind(this);
+    this._setSearchFeilds = this._setSearchFeilds.bind(this);
+    this._resetMongoResults = this._resetMongoResults.bind(this);
+  }
+
+  handleNavClick(navItem){
+    this.setState({ currentView: navItem });
+  }
+
+  _setSearchFeilds(topic, start, end) {
     this.setState({ searchTerms: [topic, start, end] });
-  },
+  }
 
-  _resetMongoResults: function(newData){
+  _resetMongoResults(newData){
     this.setState({ mongoResults: newData} );
-  },
+  }
 
-  componentDidMount: function() {
+  componentDidMount() {
 
-    helpers.apiGet().then(function(query){
+    helpers.apiGet().then((query) => {
       this.setState({mongoResults: query.data});
-    }.bind(this));
-  },
+    });
+  }
 
-  componentDidUpdate: function(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
 
     if(this.state.searchTerms != prevState.searchTerms){
 
-      helpers.articleQuery(this.state.searchTerms[0], this.state.searchTerms[1], this.state.searchTerms[2]).then(function(data) {
+      helpers.articleQuery(this.state.searchTerms[0], this.state.searchTerms[1], this.state.searchTerms[2]).then(data => {
 
         this.setState({ apiResults: data });
-      }.bind(this));
+      });
+    }
+  }
+
+  render() {
+    const currentView = () => {
+      if(this.state.currentView === 'Clone')
+      {
+        return <Clone _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else if(this.state.currentView === 'Cull')
+      {
+        return <Cull _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else if(this.state.currentView === 'Harvest')
+      {
+        return <Harvest _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else if(this.state.currentView === 'Mom')
+      {
+        return <Mom _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else if(this.state.currentView === 'Transfer')
+      {
+        return <Transfer _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else if(this.state.currentView === 'Audit')
+      {
+        return <Audit _setSearchFeilds={this._setSearchFeilds}/>
+      }
+      else
+      {
+        return <Clone _setSearchFeilds={this._setSearchFeilds}/>
+      }
     }
 
-  },
-
-  render: function() {
     return (
-
       <div>
         <div className="container-fluid row componentStyle">
           <div className="col-xs-12">
-            <Menu _setSearchFeilds={this._setSearchFeilds} />
+            <Menu _setSearchFeilds={this._setSearchFeilds} handleNavClick={this.handleNavClick}/>
           </div>
         </div>
         <div className="container-fluid row componentStyle">
           <div className="col-xs-12">
-            <Clone _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Cull _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Harvest _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Mom _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Transfer _setSearchFeilds={this._setSearchFeilds} />
-          </div>
-        </div>
-        <div className="row componentStyle">
-          <div className="col-xs-12">
-            <Audit _setSearchFeilds={this._setSearchFeilds} />
+            {currentView()}
           </div>
         </div>
       </div>
     );
   }
-});
+}
 
 module.exports = Main;

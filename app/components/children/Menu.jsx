@@ -56,7 +56,7 @@ var Menu = React.createClass({
 		  </div>
 
 		    <footer className="row4">
-		      © <img src="/images/growrulebanner.png" id="footerBanner" />
+		      <img src="/images/growrulefooter.png" height="30%" width="30%" id="footerBanner" />
 		    </footer>
 		</div>
     );

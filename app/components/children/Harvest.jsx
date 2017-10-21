@@ -16,7 +16,7 @@ var Harvest = React.createClass({
   handleSubmitOne: function(event) {
 
    event.preventDefault();
-  //  alert('WishList: Plant Ready To Harvest!');
+   alert('WishList: Plant Ready To Harvest!');
 
   },
 

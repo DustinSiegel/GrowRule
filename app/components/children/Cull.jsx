@@ -54,9 +54,9 @@ var Cull = React.createClass({
                 <div className="panel-body text-center">
                   <form>
                     <div className="form-group">
-                      <h2>
-                        {this.state.text.split("").join("")}
-                      </h2>
+                      <h5>
+                        Culled Plant#: {this.state.text.split("").join("")}
+                      </h5>
                     </div>
                     <br />
 

@@ -34,7 +34,7 @@ var Clone = React.createClass({
       <div className="col-xs-12">
         <div className="panel panel-default">
           <div className="panel-heading">
-            <h3 className="panel-title text-center">Select The Licence These Clones Belong To:</h3>
+            <h3 className="panel-title text-center">Select The License These Clones Belong To:</h3>
               <select
                 type="number"
                 value={this.state.text}
@@ -42,9 +42,9 @@ var Clone = React.createClass({
                 id="licNumber"
                 onChange={this.handleChange}
                 required >
-              <option>Hypothetical licence 1</option>
-              <option>Hypothetical licence 2</option>
-              <option>Hypothetical licence 3</option>
+              <option>Hypothetical license 1</option>
+              <option>Hypothetical license 2</option>
+              <option>Hypothetical license 3</option>
             </select>
           </div>
         </div>

@@ -16,7 +16,7 @@ app.use(express.static(process.cwd() + '/public'));
 
 
 if(process.env.NODE_ENV == 'production'){
-  mongoose.connect('mongodb://heroku_dcjvjz77:j3ib7vj9vjtp2v3a911h13sf8q@ds117485.mlab.com:17485/heroku_dcjvjz77');
+  mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds151963.mlab.com:51963/growrule');
 }
 else{
   mongoose.connect('mongodb://localhost/GrowRuleSchema');

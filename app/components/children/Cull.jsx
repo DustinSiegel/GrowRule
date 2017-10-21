@@ -4,7 +4,7 @@ var React = require("react");
 var Cull = React.createClass({
 
   getInitialState: function() {
-    return { text: "" };
+    return { text: "", items: [] };
   },
 
   handleChange: function(event) {
@@ -16,7 +16,10 @@ var Cull = React.createClass({
   handleSubmitOne: function(event) {
 
    event.preventDefault();
-   alert('WishList: Plant Ready To Cull!');
+  //  alert('WishList: Plant Ready To Cull!');
+   var newItems = this.state.items;
+   newItems.push(this.state.text.split("").join(""));
+   this.setState({items: newItems});
 
  },
 
@@ -72,6 +75,17 @@ var Cull = React.createClass({
                         Culled Plant#: {this.state.text.split("").join("")}
                       </h5>
                     </div>
+
+                    {this.state.items.map(function (item) {
+                      return (
+                        <div className="form-group">
+                          <h5>
+                            Culled Plant#: {item}
+                          </h5>
+                        </div>
+                      )
+                    })}
+
                     <br />
 
                     <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="updateDatabaseBtn">Update Database</button>

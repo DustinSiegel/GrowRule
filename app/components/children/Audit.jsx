@@ -2,6 +2,13 @@ var React = require("react");
 
 var Audit = React.createClass({
 
+  handleSubmitOne: function(event) {
+
+   event.preventDefault();
+   alert('WishList: Data Ready To View!');
+
+  },
+
   render: function() {
     return (
 
@@ -12,7 +19,7 @@ var Audit = React.createClass({
         </div>
 
         <div className="panel-body text-center">
-          <form role="form" onSubmit={this._handleSubmit}>
+          <form role="form" onSubmit={this.handleSubmitOne}>
 
             <div className="form-group">
               <label htmlFor="exampleFormControlSelect1">Select Batch to Audit:</label>

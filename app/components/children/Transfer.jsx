@@ -13,29 +13,23 @@ var Transfer = React.createClass({
     this.setState(newState);
   },
 
+  handleSubmitOne: function(event) {
+
+   event.preventDefault();
+   alert('WishList: Plant Ready To Move!');
+
+  },
+
+  handleSubmitTwo: function(event) {
+
+  event.preventDefault();
+  alert('WishList: Database Updated!');
+
+  },
+
   render: function() {
     return (
 
-<<<<<<< HEAD
-      <div className="panel panel-default">
-
-        <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Transfer Plants</b></i></h3>
-        </div>
-
-        <div className="panel-body text-center">
-          <form role="form" onSubmit={this._handleSubmit}>
-
-            <div className="form-group">
-              <label htmlFor="exampleFormControlSelect1">Select Where These Plants Go:</label>
-              <select className="form-control" id="exampleFormControlSelect1">
-                <option>Early Veg</option>
-                <option>Late Veg</option>
-                <option>Bloom 1</option>
-                <option>Bloom 2</option>
-                <option>Bloom 3</option>
-              </select>
-=======
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
@@ -56,7 +50,7 @@ var Transfer = React.createClass({
                   <option>Bloom 3</option>
                 </select>
               </div>
->>>>>>> eb9626cd3f121bb949b23f887ce6ce9615a595bf
+
             </div>
           </div>
         </div>
@@ -67,7 +61,7 @@ var Transfer = React.createClass({
                 <h3 className="panel-title text-center">Enter Plant PO#(s) To Be Moved</h3>
               </div>
               <div className="panel-body text-center">
-                <form>
+                <form role="form" onSubmit={this.handleSubmitOne}>
                   <div className="form-group">
 
                     <h4>
@@ -95,7 +89,7 @@ var Transfer = React.createClass({
                   <h3 className="panel-title text-center">Plants Ready to Move:</h3>
                 </div>
                 <div className="panel-body text-center">
-                  <form>
+                  <form role="form" onSubmit={this.handleSubmitTwo}>
                     <div className="form-group">
                       <h5>
                         Rm Name {this.state.roomName} PO#{this.state.text.split("").join("")}

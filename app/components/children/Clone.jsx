@@ -13,7 +13,19 @@ var Clone = React.createClass({
       newState[event.target.id] = event.target.value;
       this.setState(newState);
     },
+    handleSubmitOne: function(event) {
 
+     event.preventDefault();
+     alert('WishList: New Clones Are Ready!');
+
+    },
+
+    handleSubmitTwo: function(event) {
+
+    event.preventDefault();
+    alert('WishList: Database Updated!');
+
+    },
     render: function() {
       return (
 
@@ -91,7 +103,7 @@ var Clone = React.createClass({
             <h3 className="panel-title text-center">Enter Plant Mother PO#</h3>
           </div>
           <div className="panel-body text-center">
-            <form>
+            <form role="form" onSubmit={this.handleSubmitOne}>
               <div className="form-group">
 
                 <h4>
@@ -120,7 +132,7 @@ var Clone = React.createClass({
             <h3 className="panel-title text-center">New Clones:</h3>
           </div>
           <div className="panel-body text-center">
-            <form>
+            <form role="form" onSubmit={this.handleSubmitTwo}>
               <div className="form-group">
                 <h5>
                   Lic#: {this.state.licNumber} / Rm: {this.state.roomName} / {this.state.numbCuttings} Clones from Mother#: {this.state.text.split("").join("")}

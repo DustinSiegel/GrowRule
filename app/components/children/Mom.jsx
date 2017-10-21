@@ -13,6 +13,20 @@ var Mom = React.createClass({
     this.setState(newState);
   },
 
+  handleSubmitOne: function(event) {
+
+   event.preventDefault();
+   alert('WishList: Plant Ready To Become A Mom!');
+
+  },
+
+  handleSubmitTwo: function(event) {
+
+  event.preventDefault();
+  alert('WishList: Database Updated!');
+
+  },
+
   render: function() {
     return (
 
@@ -24,7 +38,7 @@ var Mom = React.createClass({
                 <h3 className="panel-title text-center">Enter PO# Of Plant To Be Made Into A Mom</h3>
               </div>
               <div className="panel-body text-center">
-                <form>
+                <form role="form" onSubmit={this.handleSubmitOne}>
                   <div className="form-group">
 
                     <h4>
@@ -52,7 +66,7 @@ var Mom = React.createClass({
                   <h3 className="panel-title text-center">Plants Ready to Be Moms:</h3>
                 </div>
                 <div className="panel-body text-center">
-                  <form>
+                  <form role="form" onSubmit={this.handleSubmitTwo}>
                     <div className="form-group">
                       <h5>
                         New Mom#: {this.state.text.split("").join("")}

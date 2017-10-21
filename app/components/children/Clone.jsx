@@ -48,11 +48,11 @@ var Clone = React.createClass({
           <form role="form" onSubmit={this._handleSubmit}>
 
             <div className="form-group">
-              <label htmlFor="exampleFormControlSelect1">Select The Licence These Clones Belong To:</label>
+              <label htmlFor="exampleFormControlSelect1">Select The License These Clones Belong To:</label>
               <select className="form-control" id="exampleFormControlSelect1">
-                <option>Hypothetical licence 1 #111111111</option>
-                <option>Hypothetical licence 2 #222222222</option>
-                <option>Hypothetical licence 3 #333333333</option>
+                <option>Hypothetical license 1 #111111111</option>
+                <option>Hypothetical license 2 #222222222</option>
+                <option>Hypothetical license 3 #333333333</option>
               </select>
             </div>
 

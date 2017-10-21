@@ -14,7 +14,7 @@ var Menu = React.createClass({
 		        <div className="col col-md-4">
 		        </div>
 		        <div className="col col-md-2 createCloneButton" >
-		          <img src="images/asset 1@3x.png" height="265px" width="273px" id="createCloneButton" onClick={() => this.props.handleNavClick('Clone')}/>
+		          <img src="images/asset1@3x.png" height="265px" width="273px" id="createCloneButton" onClick={() => this.props.handleNavClick('Clone')}/>
 		        </div>
 		        <div className="col col-md-2">
 		        </div>

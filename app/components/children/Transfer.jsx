@@ -3,79 +3,93 @@ var React = require("react");
 
 var Transfer = React.createClass({
 
-  // getInitialState: function() {
-  //   return {
-  //     topic: "",
-  //     startYear: "",
-  //     endYear: ""
-  //   };
-  // },
-  //
-  // _handleSubmit: function(event) {
-  //
-  //   event.preventDefault();
-  //
-  //   this.props._setSearchFields(this.state.topic, this.state.startYear, this.state.endYear);
-  // },
-  //
-  // _handleTopicChange: function(e) {
-  //   this.setState({topic: e.target.value});
-  // },
-  //
-  // _handleStartYearChange: function(e) {
-  //   this.setState({startYear: e.target.value});
-  // },
-  //
-  // _handleEndYearChange: function(e) {
-  //   this.setState({endYear: e.target.value});
-  // },
+  getInitialState: function() {
+    return { roomName: "", text: "" };
+  },
+
+  handleChange: function(event) {
+    var newState = {};
+    newState[event.target.id] = event.target.value;
+    this.setState(newState);
+  },
 
   render: function() {
     return (
 
-      <div className="panel panel-default">
-
-        <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Transfer</b></i></h3>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h3 className="panel-title text-center">Select Where These Plants Go:</h3>
+                <select
+                  type="text"
+                  value={this.state.roomName}
+                  className="form-control"
+                  id="roomName"
+                  onChange={this.handleChange}
+                  required >
+                  <option>Early Veg</option>
+                  <option>Late Veg</option>
+                  <option>Bloom 1</option>
+                  <option>Bloom 2</option>
+                  <option>Bloom 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h3 className="panel-title text-center">Enter Plant PO#(s) To Be Moved</h3>
+              </div>
+              <div className="panel-body text-center">
+                <form>
+                  <div className="form-group">
 
-        <div className="panel-body text-center">
-          <form role="form" onSubmit={this._handleSubmit}>
-
-            <div className="form-group">
-              <label htmlFor="exampleFormControlSelect1">Select Where These Plants Go:</label>
-              <select className="form-control" id="exampleFormControlSelect1">
-                <option>Early Veg</option>
-                <option>Late Veg</option>
-                <option>Bloom 1</option>
-                <option>Bloom 2</option>
-                <option>Bloom 3</option>
-              </select>
+                    <h4>
+                      <strong>Enter PO#(s) Here:</strong>
+                    </h4>
+                    <input
+                      type="text"
+                      value={this.state.text}
+                      className="form-control"
+                      id="text"
+                      onChange={this.handleChange}
+                      required
+                    />
+                    <br />
+                    <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="submitCull">PO Ready</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12">
+              <div className="panel panel-default">
+                <div className="panel-heading">
+                  <h3 className="panel-title text-center">Plants Ready to Move:</h3>
+                </div>
+                <div className="panel-body text-center">
+                  <form>
+                    <div className="form-group">
+                      <h5>
+                        Rm Name {this.state.roomName} PO#{this.state.text.split("").join("")}
+                      </h5>
+                    </div>
+                    <br />
 
-            <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="topic" className="text-center">Enter or Scan PO#(s) to be Moved</label>
-              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
-              <br />
-              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
+                    <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="updateDatabaseBtn">Update Database</button>
+                  </form>
+                </div>
+              </div>
             </div>
-
-            <br />
-
-            <div className="form-group col-xs-12">
-              <label htmlFor="startYear">Plants Ready to be Moved:</label>
-              <textarea type="text" className="form-control text-center" id="startYear" rows="5" onChange={this._handleStartYearChange} />
-            </div>
-
-            <br />
-
-            <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="searchBtn">Update Database</button>
-
-          </form>
+          </div>
         </div>
-
       </div>
-
     );
   }
 });

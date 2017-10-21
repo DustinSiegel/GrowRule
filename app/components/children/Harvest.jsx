@@ -3,74 +3,71 @@ var React = require("react");
 
 var Harvest = React.createClass({
 
-  // getInitialState: function() {
-  //   return {
-  //     topic: "",
-  //     startYear: "",
-  //     endYear: ""
-  //   };
-  // },
-  //
-  // _handleSubmit: function(event) {
-  //
-  //   event.preventDefault();
-  //
-  //   this.props._setSearchFeilds(this.state.harvest, //this.state.poNum, this.state.date, this.state.strainName);
-  // },
-  //
-  // _handleharvestChange: function(e) {
-  //   this.setState({harvest: e.target.value});
-  // },
-  //
-  // _handlepoNumChange: function(e) {
-  //   this.setState({poNum: e.target.value});
-  // },
-  //
-  // _handledateChange: function(e) {
-  //   this.setState({date: e.target.value});
-  // },
-  //
-  //_handlestrainNameChange: function(e) {
-  //   this.setState({strainName: e.target.value});
-  // },
+  getInitialState: function() {
+    return { text: "" };
+  },
+
+  handleChange: function(event) {
+    var newState = {};
+    newState[event.target.id] = event.target.value;
+    this.setState(newState);
+  },
 
   render: function() {
     return (
 
-      // <div>Harvest file connected!</div>
-      <div className="panel panel-default">
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h3 className="panel-title text-center">Enter PO#(s) To Be Harvested</h3>
+              </div>
+              <div className="panel-body text-center">
+                <form>
+                  <div className="form-group">
 
-        <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Harvest</b></i></h3>
-        </div>
-
-        <div className="panel-body text-center">
-          <form role="form" onSubmit={this._handleSubmit}>
-
-            <div className="form-group col-md-offset-3 col-md-6">
-              <label htmlFor="Harvest" className="text-center">Enter or Scan PO#(s) to be Harvested</label>
-              <input type="text" className="form-control text-center" id="harvest" onChange={this._handleharvestChange} />
-              <br />
-              <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="addField">Add to Change List</button>
+                    <h4>
+                      <strong>Enter PO#(s) Here:</strong>
+                    </h4>
+                    <input
+                      type="text"
+                      value={this.state.text}
+                      className="form-control"
+                      id="text"
+                      onChange={this.handleChange}
+                      required
+                    />
+                    <br />
+                    <button type="submit" className="btn btn-info btn- col-md-offset-4 col-md-4" id="submitHarvest">PO Ready</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12">
+              <div className="panel panel-default">
+                <div className="panel-heading">
+                  <h3 className="panel-title text-center">Plants Ready to Harvest:</h3>
+                </div>
+                <div className="panel-body text-center">
+                  <form>
+                    <div className="form-group">
+                      <h5>
+                        Harvested Plant#: {this.state.text.split("").join("")}
+                      </h5>
+                    </div>
+                    <br />
 
-            <br />
-
-            <div className="form-group col-xs-12">
-              <label htmlFor="poNum">Plants Ready to be Harvested:</label>
-              <textarea type="text" className="form-control text-center" id="poNum" rows="5" onChange={this._handlepoNumChange} />
-
+                    <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="updateDatabaseBtn">Update Database</button>
+                  </form>
+                </div>
+              </div>
             </div>
-
-            <br />
-
-            <button type="submit" className="btn btn-info col-md-offset-5 col-md-2" id="searchBtn">Update Database</button>
-
-          </form>
+          </div>
         </div>
-
       </div>
-
     );
   }
 });

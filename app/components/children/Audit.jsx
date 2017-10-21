@@ -18,9 +18,9 @@ var Audit = React.createClass({
               <label htmlFor="exampleFormControlSelect1">Select Batch to Audit:</label>
               <select className="form-control" id="exampleFormControlSelect1">
                 <option>All Plants</option>
-                <option>Hypothetical licence 1 #111111111</option>
-                <option>Hypothetical licence 2 #222222222</option>
-                <option>Hypothetical licence 3 #333333333</option>
+                <option>Hypothetical license 1 #111111111</option>
+                <option>Hypothetical license 2 #222222222</option>
+                <option>Hypothetical license 3 #333333333</option>
                 <option>Clone 1</option>
                 <option>Clone 2</option>
                 <option>Early Veg</option>

@@ -47,16 +47,13 @@ var Menu = React.createClass({
 		        <div className="col col-md-1">
 		        </div>
 		        <div className="col col-md-2 viewDataButton">
-		          <img src="/images/asset 7@3x.png" height="280px" width="305px" id="viewDataButton" />
+		          <img src="/images/asset 7@3x.png" height="280px" width="305px" id="viewDataButton" onClick={() => this.props.handleNavClick('Audit')}/>
 		        </div>
 		        <div className="col col-md-3">
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-		  <footer className="row4">
-		    <img src="/images/growrulefooter.png" height="30%" width="30%" id="footerBanner" />
-		  </footer>
 		</div>
     );
   }
@@ -91,4 +88,3 @@ class ShowHide extends React.Component {
 };
 
 module.exports = Menu;
-// module.exports = ShowHide;

@@ -13,6 +13,20 @@ var Cull = React.createClass({
     this.setState(newState);
   },
 
+  handleSubmitOne: function(event) {
+
+   event.preventDefault();
+   alert('WishList: Plant Ready To Cull!');
+
+ },
+
+ handleSubmitTwo: function(event) {
+
+  event.preventDefault();
+  alert('WishList: Database Updated!');
+
+},
+
   render: function() {
     return (
 
@@ -24,7 +38,7 @@ var Cull = React.createClass({
                 <h3 className="panel-title text-center">Enter PO#(s) To Be Culled</h3>
               </div>
               <div className="panel-body text-center">
-                <form>
+                <form role="form" onSubmit={this.handleSubmitOne}>
                   <div className="form-group">
 
                     <h4>
@@ -52,7 +66,7 @@ var Cull = React.createClass({
                   <h3 className="panel-title text-center">Plants Ready to Cull:</h3>
                 </div>
                 <div className="panel-body text-center">
-                  <form>
+                  <form role="form" onSubmit={this.handleSubmitTwo}>
                     <div className="form-group">
                       <h5>
                         Culled Plant#: {this.state.text.split("").join("")}
